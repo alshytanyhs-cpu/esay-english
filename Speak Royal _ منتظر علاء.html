@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Speak Royal | منتظر علاء</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#f6f1e7;--b1:#f0c75e55;--b2:#7c8cff44;--b3:#ff8fb144;--card:#ffffffcc;--bd:#e7dcc4;--tx:#241d10;--mut:#7a6d52;--gold:#b8860b;--gold2:#e0a82e;--pri:#4b3bd8;--soft:#f3ead3;--track:#e8dfca}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#090b14;--b1:#d4a62a40;--b2:#5b6cff40;--b3:#c0408040;--card:#141829b8;--bd:#2b3150;--tx:#f4efe2;--mut:#a39d8c;--gold:#f2c14e;--gold2:#ffdf8a;--pri:#8f9bff;--soft:#1c2140;--track:#2a3050}}
+:root[data-theme="dark"]{--bg:#090b14;--b1:#d4a62a40;--b2:#5b6cff40;--b3:#c0408040;--card:#141829b8;--bd:#2b3150;--tx:#f4efe2;--mut:#a39d8c;--gold:#f2c14e;--gold2:#ffdf8a;--pri:#8f9bff;--soft:#1c2140;--track:#2a3050}
+*{box-sizing:border-box}html,body{margin:0}
+body{background:var(--bg);color:var(--tx);font-family:'Tajawal',system-ui,sans-serif;min-height:100vh;overflow-x:hidden;position:relative}
+.blob{position:fixed;width:46vmax;height:46vmax;border-radius:50%;filter:blur(70px);z-index:0;animation:fl 18s ease-in-out infinite alternate;pointer-events:none}
+.b1{background:var(--b1);top:-14vmax;right:-10vmax}.b2{background:var(--b2);bottom:-16vmax;left:-12vmax;animation-delay:-6s}.b3{background:var(--b3);top:40%;left:30%;width:28vmax;height:28vmax;animation-delay:-11s}
+@keyframes fl{to{transform:translate(6vmax,5vmax) scale(1.2)}}
+#cf{position:fixed;inset:0;pointer-events:none;z-index:50}
+.wrap{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:16px 14px 50px}
+.top{display:flex;align-items:center;gap:12px;justify-content:space-between;flex-wrap:wrap}
+.brand{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;background-size:200%;animation:sh 5s linear infinite}
+@keyframes sh{to{background-position:200%}}
+.hi{color:var(--mut);font-size:15px}.hi b{color:var(--gold);font-size:18px}
+.ib{width:42px;height:42px;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:var(--tx);font-size:18px;cursor:pointer;backdrop-filter:blur(10px)}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:24px;padding:18px;margin-top:14px;backdrop-filter:blur(14px);box-shadow:0 10px 40px rgba(0,0,0,.12);animation:up .5s both}
+@keyframes up{from{opacity:0;transform:translateY(14px)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}
+.st{background:var(--soft);border-radius:16px;padding:9px 4px}.st b{display:block;font-size:21px;color:var(--gold)}.st span{font-size:12px;color:var(--mut)}
+.xp{height:10px;background:var(--track);border-radius:9px;overflow:hidden;margin:12px 0 4px}.xp i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:9px;transition:width .8s}
+.lv{display:flex;justify-content:space-between;font-size:13px;color:var(--mut)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{flex:1;min-width:80px;border:1px solid var(--bd);background:var(--soft);color:var(--mut);font:inherit;font-weight:700;padding:10px 8px;border-radius:14px;cursor:pointer;transition:.2s}
+.tabs button.on{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#2a1d00;border-color:transparent;transform:translateY(-2px);box-shadow:0 6px 18px #e0a82e55}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:12px}
+select,textarea,input{font:inherit;color:var(--tx);background:var(--soft);border:1px solid var(--bd);border-radius:14px;padding:10px 12px;width:100%}
+select{flex:1;direction:ltr;text-align:left;min-width:160px;width:auto}
+textarea{direction:ltr;text-align:left;min-height:84px;resize:vertical}
+.btn{font:inherit;font-weight:800;border:0;border-radius:14px;padding:11px 18px;cursor:pointer;color:#2a1d00;background:linear-gradient(135deg,var(--gold),var(--gold2));box-shadow:0 5px 16px #e0a82e44;transition:.15s}
+.btn:active{transform:scale(.95)}
+.seg{display:inline-flex;background:var(--soft);border-radius:12px;padding:3px}
+.seg button{border:0;background:transparent;color:var(--mut);font:inherit;font-weight:700;padding:6px 12px;border-radius:9px;cursor:pointer}.seg button.on{background:var(--pri);color:#fff}
+.en{direction:ltr;text-align:left;font-family:'Playfair Display','Tajawal',serif;font-size:32px;font-weight:600;line-height:1.4;margin:4px 0 14px}.en.long{font-size:21px;line-height:1.7}
+.tr{border-top:1px dashed var(--bd);padding-top:12px;display:grid;gap:7px;font-size:18px}.tr b{color:var(--gold);font-size:13px;margin-inline-end:8px}
+.ctl{display:flex;gap:26px;justify-content:center;margin-top:8px}.ctl>div{text-align:center}
+.round{width:82px;height:82px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#5b6cff,#8e54e9);box-shadow:0 8px 24px #5b6cff66;transition:.15s;position:relative}
+.round:active{transform:scale(.92)}.round.mic{background:linear-gradient(135deg,#f2994a,#eb5757)}
+.round svg{width:34px;height:34px;fill:currentColor}.round.rec{animation:pl 1s infinite;box-shadow:0 0 0 0 #eb575788}
+@keyframes pl{70%{box-shadow:0 0 0 22px #eb575700}}
+.lbl{font-size:13px;color:var(--mut);margin-top:6px}
+.wave{display:none;gap:4px;justify-content:center;height:30px;align-items:center;margin-top:10px}.wave.on{display:flex}
+.wave i{width:5px;border-radius:5px;background:var(--gold);animation:wv .8s ease-in-out infinite}.wave i:nth-child(2n){animation-delay:-.3s}.wave i:nth-child(3n){animation-delay:-.55s}
+@keyframes wv{0%,100%{height:6px}50%{height:28px}}
+.res{display:none;text-align:center}.res.show{display:block}
+.ring{position:relative;width:170px;height:170px;margin:0 auto 6px}.ring svg{transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12;stroke-linecap:round}.ring .t{stroke:var(--track)}.ring .p{transition:stroke-dashoffset .9s,stroke .4s;filter:drop-shadow(0 0 8px currentColor)}
+.ring .n{position:absolute;inset:0;display:grid;place-items:center;font-size:42px;font-weight:800}
+.verdict{font-size:22px;font-weight:800;margin-bottom:8px}
+.words{direction:ltr;display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin:10px 0}
+.w{padding:5px 12px;border-radius:10px;font-weight:700;font-size:18px;border:2px solid;cursor:pointer;transition:.15s}.w:hover{transform:translateY(-2px)}
+.w.g{background:#22c55e26;border-color:#22c55e}.w.y{background:#eab30829;border-color:#eab308}.w.x{background:#4b556340;border-color:#4b5563;text-decoration:line-through}
+.heard{color:var(--mut);font-size:14px;direction:ltr}.heard span{color:var(--tx)}.hint{font-size:12px;color:var(--mut);margin-top:6px}
+.hist{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:10px}.hist i{font-style:normal;font-size:12px;font-weight:800;color:#1b1b1b;padding:4px 9px;border-radius:20px}
+.legend{display:flex;gap:6px 14px;flex-wrap:wrap;justify-content:center;font-size:12.5px;color:var(--mut)}.legend i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-inline-end:5px}
+.note{color:var(--mut);font-size:13px;text-align:center;margin-top:8px}
+.toast{position:fixed;top:18px;left:50%;transform:translate(-50%,-90px);background:linear-gradient(135deg,var(--gold),var(--gold2));color:#2a1d00;font-weight:800;padding:12px 22px;border-radius:30px;z-index:60;transition:.5s;box-shadow:0 10px 30px #0006}.toast.on{transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><canvas id="cf"></canvas><div class="toast" id="toast"></div>
+<div class="wrap">
+  <div class="top">
+    <div><div class="brand">✦ Speak Royal</div><div class="hi">أهلاً بك يا <b>منتظر علاء</b> 👑</div></div>
+    <div class="row" style="margin:0"><button class="ib" id="snd" title="المؤثرات الصوتية">🔊</button><button class="ib" id="thm" title="الوضع">🌓</button></div>
+  </div>
+
+  <div class="card">
+    <div class="stats"><div class="st"><b id="sLv">1</b><span>المستوى</span></div><div class="st"><b id="sXp">0</b><span>نقاط XP</span></div><div class="st"><b id="sStr">0</b><span>🔥 تتابع النجاح</span></div><div class="st"><b id="sBest">0%</b><span>أفضل نسبة</span></div></div>
+    <div class="xp"><i id="xpb"></i></div><div class="lv"><span id="ttl">مبتدئ</span><span id="nxt"></span></div>
+  </div>
+
+  <div class="card">
+    <div class="tabs" id="tabs"><button data-m="s" class="on">💬 جمل</button><button data-m="w">🔤 كلمات</button><button data-m="t">📖 نصوص</button><button data-m="c">✍️ جملتي</button></div>
+    <div class="row" id="pickRow"><select id="pick" aria-label="اختر بنفسك"></select><button class="btn" id="rand">🎲 عشوائي</button></div>
+    <div id="cust" style="display:none">
+      <div class="row"><textarea id="cEn" placeholder="اكتب الجملة الإنجليزية التي تريد التدرب عليها..."></textarea></div>
+      <div class="row"><input id="cAr" placeholder="الترجمة العربية (اختياري)"><button class="btn" id="cGo">ابدأ التدريب 🚀</button></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="en" id="en"></div>
+    <div class="tr"><div><b>العربية</b><span id="ar"></span></div><div id="d3"><b id="l3">باللهجة العراقية</b><span id="dl"></span></div></div>
+  </div>
+
+  <div class="card">
+    <div class="row" style="justify-content:center;margin:0 0 14px"><div class="seg" id="repSeg"><button data-r="1" class="on">مرة</button><button data-r="2">مرتين</button></div><div class="seg" id="spdSeg"><button data-s="0" class="on">عادي</button><button data-s="1">بطيء 🐢</button></div></div>
+    <div class="ctl">
+      <div><button class="round" id="play" aria-label="استمع"><svg viewBox="0 0 24 24"><path d="M3 10v4h4l5 4V6L7 10H3zm13.5 2a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg></button><div class="lbl">استمع</div></div>
+      <div><button class="round mic" id="mic" aria-label="تحدث"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V22h2v-3.1A7 7 0 0 0 19 12h-2z"/></svg></button><div class="lbl" id="micLbl">ردّد خلفه</div></div>
+    </div>
+    <div class="wave" id="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="note" id="support"></div>
+  </div>
+
+  <div class="card res" id="res">
+    <div class="ring"><svg width="170" height="170" viewBox="0 0 120 120"><circle class="t" cx="60" cy="60" r="52"/><circle class="p" id="arc" cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="326.7"/></svg><div class="n" id="num">0%</div></div>
+    <div class="verdict" id="verdict"></div>
+    <div class="words" id="words"></div>
+    <div class="hint">👆 اضغط على أي كلمة لتسمع نطقها</div>
+    <div class="heard">سمعتك تقول: <span id="heard"></span></div>
+    <div class="hist" id="hist"></div>
+    <div class="legend" style="margin-top:14px"><span><i style="background:#4b5563"></i>&lt;30%</span><span><i style="background:#fde047"></i>30%+</span><span><i style="background:#eab308"></i>50%+</span><span><i style="background:#a3e635"></i>70%+</span><span><i style="background:#22c55e"></i>85%+</span></div>
+  </div>
+</div>
+
+<script>
+const S=[["How are you today?","كيف حالك اليوم؟","شلونك اليوم؟"],["Nice to meet you.","سعدت بلقائك.","تشرفنا."],["Can you help me, please?","هل يمكنك مساعدتي من فضلك؟","ممكن تساعدني لو سمحت؟"],["I would like a glass of water.","أود كوباً من الماء.","أريد كاسة ماي."],["Where is the nearest hospital?","أين أقرب مستشفى؟","وين أقرب مستشفى؟"],["How much does this cost?","كم سعر هذا؟","بيش هذا؟"],["I don't understand, could you repeat that?","لا أفهم، هل يمكنك الإعادة؟","ما فهمت، تقدر تعيدها؟"],["Could you speak a little slower?","هل يمكنك التحدث ببطء؟","ممكن تحچي أبطأ شوية؟"],["What time does the meeting start?","متى يبدأ الاجتماع؟","الساعة شكد يبدي الاجتماع؟"],["I am learning English every day.","أتعلم الإنجليزية كل يوم.","أتعلم إنكليزي كل يوم."],["The weather is beautiful today.","الطقس جميل اليوم.","الجو حلو اليوم."],["I have a reservation under my name.","لدي حجز باسمي.","عندي حجز بإسمي."],["I'm looking for a good restaurant.","أبحث عن مطعم جيد.","أدوّر على مطعم زين."],["Please call me when you arrive.","اتصل بي عندما تصل.","دقّلي لمن توصل."],["I work as an engineer in a big company.","أعمل مهندساً في شركة كبيرة.","أشتغل مهندس بشركة كبيرة."],["Thank you very much for your help.","شكراً جزيلاً على مساعدتك.","كلش مشكور على مساعدتك."],["Where can I find a taxi?","أين أجد سيارة أجرة؟","وين ألكى تاكسي؟"],["I'm sorry, I'm late.","آسف، تأخرت.","آسف، تأخرت."],["What do you recommend?","ماذا تنصحني؟","شتنصحني؟"],["Can I pay by credit card?","هل أستطيع الدفع بالبطاقة؟","أكدر أدفع بالكارت؟"],["I need to charge my phone.","أحتاج لشحن هاتفي.","أحتاج أشحن موبايلي."],["Let's meet tomorrow morning.","لنلتقِ غداً صباحاً.","خل نتلاكى باچر الصبح."],["I'm very proud of you.","أنا فخور بك جداً.","أني كلش فخور بيك."],["Practice makes perfect.","التدريب يصنع الإتقان.","التمرين يخليك محترف."],["Everything will be fine.","كل شيء سيكون بخير.","كلشي يصير زين."],["Could you open the window, please?","هل تفتح النافذة من فضلك؟","تكدر تفتح الشباچ لو سمحت؟"]];
+const W=[["Beautiful","جميل","بيوتيفل"],["Comfortable","مريح","كَمفرتبل"],["Vegetable","خضار","فيجتبل"],["Wednesday","الأربعاء","ونزداي"],["Island","جزيرة","آيلند"],["Knowledge","معرفة","نوليج"],["Environment","بيئة","إنفايرنمنت"],["Schedule","جدول","سكيجول"],["Pronunciation","نطق","برونانسيان"],["Third","ثالث","ثيرد"],["Through","عبر","ثرو"],["Thought","فكرة","ثوت"],["Water","ماء","ووتر"],["Library","مكتبة","لايبريري"],["Restaurant","مطعم","ريستورنت"],["Chocolate","شوكولاتة","تشوكلت"],["Language","لغة","لانغويج"],["Strength","قوة","ستْرينث"],["Success","نجاح","سَكسس"],["Quiet","هادئ","كوايت"],["Quite","تماماً","كوايت"],["Honest","صادق","أونست"],["Receipt","إيصال","ريسيت"],["Brother","أخ","برذر"],["Weather","طقس","ويذر"],["Develop","يطوّر","ديفيلوب"],["Experience","خبرة","إكسبيريانس"],["Particularly","خصوصاً","بارتيكيولارلي"],["Mountain","جبل","ماونتن"],["Sandwich","ساندويتش","ساندويتش"],["Journey","رحلة","جيرني"],["Entrepreneur","رائد أعمال","أونتربرنور"],["Probably","على الأرجح","بروبابلي"],["Squirrel","سنجاب","سكويرل"],["Rhythm","إيقاع","ريذم"],["Cemetery","مقبرة","سيمتري"],["Aluminium","ألمنيوم","ألمنيوم"],["Opportunity","فرصة","أوبورتيونيتي"],["Interesting","مثير للاهتمام","إنتريستنغ"],["Vocabulary","مفردات","فوكابيولاري"],["Temperature","درجة الحرارة","تمبرتشر"],["Necessary","ضروري","نيسيسري"],["Photograph","صورة","فوتوغراف"],["Hospital","مستشفى","هوسبتل"],["Guarantee","ضمان","غارنتي"],["Genuine","أصيل","جنيون"],["Ocean","محيط","أوشن"],["Courage","شجاعة","كاريج"],["Freedom","حرية","فريدوم"],["Champion","بطل","تشامبيون"]];
+const T=[["My name is Ali. I live in a small city with my family. Every morning I drink tea and read the news.","اسمي علي. أعيش في مدينة صغيرة مع عائلتي. كل صباح أشرب الشاي وأقرأ الأخبار.","اسمي علي. أسكن بمدينة صغيرة وي عائلتي. كل صبح أشرب جاي وأقرأ الأخبار."],["Yesterday I went to the market to buy some fruit. The prices were high, but the vegetables were fresh.","أمس ذهبت إلى السوق لشراء الفاكهة. كانت الأسعار مرتفعة لكن الخضار طازجة.","أمس رحت للسوق أشتري فواكه. الأسعار غالية بس الخضرة طازة."],["I want to improve my English because it will help me find a better job and travel around the world.","أريد تحسين لغتي الإنجليزية لأنها ستساعدني في إيجاد وظيفة أفضل والسفر حول العالم.","أريد أحسّن انكليزيتي لأنها راح تساعدني ألكى شغل أحسن وأسافر بالعالم."],["Success is not final and failure is not fatal. It is the courage to continue that counts.","النجاح ليس نهائياً والفشل ليس قاتلاً، الشجاعة على المتابعة هي ما يهم.","النجاح مو نهائي والفشل مو قاتل، المهم الشجاعة تكمل."]];
+const D={s:S,w:W,t:T,c:[]},LB={s:"باللهجة العراقية",w:"النطق بالعربي",t:"باللهجة العراقية",c:""};
+const $=id=>document.getElementById(id),tabs=[...document.querySelectorAll('#tabs button')];
+let mode='s',cur=null,reps=1,slow=false,rec=null,listening=false,voices=[],sfx=true,AC;
+let st={xp:0,streak:0,best:0,h:[]};try{Object.assign(st,JSON.parse(localStorage.getItem('mn_sr')||'{}'))}catch(e){}
+const save=()=>{try{localStorage.setItem('mn_sr',JSON.stringify(st))}catch(e){}};
+
+/* ---- sound ---- */
+function tone(f,t=0,d=.15,ty='sine',v=.14){if(!sfx)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain(),s=AC.currentTime+t;o.type=ty;o.frequency.value=f;g.gain.setValueAtTime(0,s);g.gain.linearRampToValueAtTime(v,s+.02);g.gain.exponentialRampToValueAtTime(.001,s+d);o.connect(g).connect(AC.destination);o.start(s);o.stop(s+d+.05)}catch(e){}}
+const sx={click:()=>tone(660,0,.08,'triangle'),pop:()=>{tone(520,0,.1);tone(780,.07,.12)},mic:()=>{tone(880,0,.1,'square',.05);tone(1175,.09,.12,'square',.05)},win:()=>[523,659,784,1047,1319].forEach((f,i)=>tone(f,i*.09,.35,'triangle')),ok:()=>[440,554,659].forEach((f,i)=>tone(f,i*.1,.25)),meh:()=>{tone(392,0,.2,'triangle');tone(349,.14,.25,'triangle')},bad:()=>{tone(260,0,.22,'sawtooth',.06);tone(196,.16,.32,'sawtooth',.06)},lvl:()=>[392,523,659,784,1047,1319].forEach((f,i)=>tone(f,i*.08,.4,'triangle'))};
+
+/* ---- ui ---- */
+function toast(t){$('toast').textContent=t;$('toast').classList.add('on');setTimeout(()=>$('toast').classList.remove('on'),2600)}
+function stats(){const lv=Math.floor(st.xp/150)+1,T=["مبتدئ 🌱","متحدث ⭐","طليق 🚀","محترف 💎","أسطورة 👑"];
+  $('sLv').textContent=lv;$('sXp').textContent=st.xp;$('sStr').textContent=st.streak;$('sBest').textContent=st.best+'%';
+  $('xpb').style.width=(st.xp%150)/1.5+'%';$('ttl').textContent=T[Math.min(4,Math.floor((lv-1)/3))];$('nxt').textContent=(150-st.xp%150)+' XP للمستوى التالي'}
+function fill(){$('pick').innerHTML=D[mode].map((x,i)=>`<option value="${i}">${i+1}. ${x[0].slice(0,50)}${x[0].length>50?'…':''}</option>`).join('')}
+function setItem(i){cur=D[mode][i];$('pick').value=i;show0()}
+function show0(){$('en').textContent=cur[0];$('en').className='en'+(mode==='t'||cur[0].length>60?' long':'');$('ar').textContent=cur[1]||'—';
+  $('d3').style.display=cur[2]?'':'none';$('l3').textContent=LB[mode];$('dl').textContent=cur[2]||'';$('res').classList.remove('show')}
+function rand(){const L=D[mode];let i;do{i=Math.floor(Math.random()*L.length)}while(L.length>1&&L[i]===cur);setItem(i);sx.pop()}
+function setMode(m){mode=m;tabs.forEach(b=>b.classList.toggle('on',b.dataset.m===m));stopRec();
+  $('pickRow').style.display=m==='c'?'none':'flex';$('cust').style.display=m==='c'?'block':'none';
+  if(m==='c'){if(D.c.length)cur=D.c[D.c.length-1];else cur=["Write your own sentence above","اكتب جملتك في المربع بالأعلى",""];show0()}else{fill();rand()}sx.click()}
+tabs.forEach(b=>b.onclick=()=>setMode(b.dataset.m));
+$('cGo').onclick=()=>{const t=$('cEn').value.trim();if(!t){toast('اكتب جملة أولاً ✍️');return}D.c.push([t,$('cAr').value.trim(),'']);cur=D.c[D.c.length-1];show0();sx.pop()};
+$('rand').onclick=rand;$('pick').onchange=e=>{setItem(+e.target.value);sx.click()};
+const seg=(id,fn)=>document.querySelectorAll('#'+id+' button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#'+id+' button').forEach(x=>x.classList.remove('on'));b.classList.add('on');fn(b.dataset);sx.click()});
+seg('repSeg',d=>reps=+d.r);seg('spdSeg',d=>slow=d.s==='1');
+$('snd').onclick=()=>{sfx=!sfx;$('snd').textContent=sfx?'🔊':'🔇';sx.click()};
+$('thm').onclick=()=>{const r=document.documentElement,dark=r.dataset.theme?r.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;r.dataset.theme=dark?'light':'dark';sx.click()};
+
+/* ---- speech out ---- */
+if('speechSynthesis' in window){const lv=()=>voices=speechSynthesis.getVoices();lv();speechSynthesis.onvoiceschanged=lv}
+function say(text,n=1,rate=.92){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const v=voices.find(v=>/en[-_]US/i.test(v.lang))||voices.find(v=>/^en/i.test(v.lang));
+  for(let i=0;i<n;i++){const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=rate;if(v)u.voice=v;speechSynthesis.speak(u)}}
+$('play').onclick=()=>{sx.click();say(cur[0],reps,slow?.6:.92)};
+
+/* ---- scoring ---- */
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9' ]/g,' ').replace(/\s+/g,' ').trim().split(' ').filter(Boolean);
+function lev(a,b){const d=Array.from({length:a.length+1},(_,i)=>[i]);for(let j=1;j<=b.length;j++)d[0][j]=j;for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[a.length][b.length]}
+const sim=(a,b)=>1-lev(a,b)/Math.max(a.length,b.length),credit=s=>s>=.85?1:s>=.5?s*.6:0;
+function score(target,heard){const A=norm(target),B=norm(heard),n=A.length,m=B.length;if(!m)return{pct:0,res:A.map(w=>({w,c:0})),heard};
+  const D2=Array.from({length:n+1},()=>Array(m+1).fill(0));for(let i=1;i<=n;i++)for(let j=1;j<=m;j++)D2[i][j]=Math.max(D2[i-1][j],D2[i][j-1],D2[i-1][j-1]+credit(sim(A[i-1],B[j-1])));
+  const res=A.map(w=>({w,c:0}));let i=n,j=m,mt=0;while(i>0&&j>0){const c=credit(sim(A[i-1],B[j-1]));if(c>0&&Math.abs(D2[i][j]-(D2[i-1][j-1]+c))<1e-9){res[i-1].c=c;mt++;i--;j--}else if(Math.abs(D2[i][j]-D2[i-1][j])<1e-9)i--;else j--}
+  return{pct:Math.max(0,Math.min(100,Math.round(100*D2[n][m]/n-Math.max(0,m-mt)*3))),res,heard}}
+const col=p=>p<30?'#4b5563':p<50?'#fde047':p<70?'#eab308':p<85?'#a3e635':'#22c55e';
+function msg(p){const n='منتظر';return p<30?`حاول مرة ثانية يا ${n} 💪`:p<50?`بداية حلوة يا ${n}!`:p<70?`قرّبت يا بطل! 🔥`:p<85?`ممتاز يا ${n} 👏`:`رائع يا ${n}! نطق ملكي 👑`}
+function show(r){const p=r.pct,c=col(p),oldLv=Math.floor(st.xp/150);
+  st.xp+=Math.round(p/4)+(p>=70?5:0);st.best=Math.max(st.best,p);st.streak=p>=70?st.streak+1:0;st.h=[...st.h,p].slice(-10);save();
+  $('res').classList.add('show');$('arc').style.stroke=c;$('arc').style.color=c;$('arc').style.strokeDashoffset=326.7*(1-p/100);
+  $('num').textContent=p+'%';$('num').style.color=c;$('verdict').textContent=msg(p);
+  $('words').innerHTML=r.res.map(x=>`<span class="w ${x.c>=1?'g':x.c>0?'y':'x'}">${x.w}</span>`).join('');
+  document.querySelectorAll('.w').forEach(w=>w.onclick=()=>say(w.textContent,1,.7));
+  $('heard').textContent=r.heard||'— لم أسمع شيئاً —';$('hist').innerHTML=st.h.map(v=>`<i style="background:${col(v)}">${v}%</i>`).join('');
+  p>=85?(sx.win(),boom()):p>=70?sx.ok():p>=30?sx.meh():sx.bad();
+  stats();if(Math.floor(st.xp/150)>oldLv)setTimeout(()=>{sx.lvl();toast('🎉 ترقية! مستواك الآن '+(Math.floor(st.xp/150)+1)+' يا منتظر');boom()},900);
+  $('res').scrollIntoView({behavior:'smooth',block:'nearest'})}
+
+/* ---- confetti ---- */
+const cv=$('cf'),cx=cv.getContext('2d');let ps=[];
+function boom(){cv.width=innerWidth;cv.height=innerHeight;ps=Array.from({length:150},()=>({x:innerWidth/2,y:innerHeight*.45,vx:(Math.random()-.5)*16,vy:-Math.random()*15-3,s:Math.random()*8+4,r:Math.random()*6,c:['#f2c14e','#ff6b9d','#5b6cff','#22c55e','#fff'][Math.random()*5|0]}));loop()}
+function loop(){cx.clearRect(0,0,cv.width,cv.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=.35;p.r+=.2;cx.fillStyle=p.c;cx.save();cx.translate(p.x,p.y);cx.rotate(p.r);cx.fillRect(-p.s/2,-p.s/2,p.s,p.s*.6);cx.restore()});ps=ps.filter(p=>p.y<cv.height+20);if(ps.length)requestAnimationFrame(loop)}
+
+/* ---- speech in ---- */
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR)$('support').textContent='⚠️ التعرف على الصوت غير مدعوم هنا. استخدم Chrome أو Edge أو Safari.';
+function stopRec(){if(rec&&listening)rec.stop()}
+$('mic').onclick=()=>{if(!SR){alert('المتصفح لا يدعم التعرف على الصوت.');return}if(listening){rec.stop();return}
+  if('speechSynthesis' in window)speechSynthesis.cancel();sx.mic();
+  rec=new SR();rec.lang='en-US';rec.maxAlternatives=3;rec.continuous=(mode==='t'||cur[0].length>70);let cands=[],full=[];
+  rec.onstart=()=>{listening=true;$('mic').classList.add('rec');$('wave').classList.add('on');$('micLbl').textContent=rec.continuous?'اضغط للإيقاف':'أسمعك...'};
+  rec.onresult=e=>{for(let i=e.resultIndex;i<e.results.length;i++){const r=e.results[i];if(!r.isFinal)continue;full.push(r[0].transcript);if(!rec.continuous){cands=[];for(let k=0;k<r.length;k++)cands.push(r[k].transcript)}}if(!rec.continuous)rec.stop()};
+  rec.onerror=e=>{$('support').textContent=(e.error==='not-allowed'||e.error==='service-not-allowed')?'⚠️ اسمح باستخدام المايكروفون من إعدادات المتصفح.':e.error==='no-speech'?'لم أسمع صوتاً، حاول مرة أخرى.':''};
+  rec.onend=()=>{listening=false;$('mic').classList.remove('rec');$('wave').classList.remove('on');$('micLbl').textContent='ردّد خلفه';if(rec.continuous)cands=[full.join(' ')];if(!cands.length||!cands[0].trim())return;$('support').textContent='';
+    let b=null;cands.forEach(c=>{const s=score(cur[0],c);if(!b||s.pct>b.pct)b=s});show(b)};
+  rec.start()};
+
+stats();setMode('s');
+</script>
+</body>
+</html>
